@@ -6,10 +6,10 @@ This code was used to produce the results in "Computed tomography without X-rays
 
 1. Department of Mathematics, Gonzaga University, Spokane, WA 99258, USA
 2. Department of Mathematics and Statistics, University of Helsinki, Helsinki, Finland
-3. Engineering, Modeling and Applied Social Sciences Center, Federal University of ABC, S\~ao Paulo, Brazil
-4. FaMAF, National University of C\'ordoba, C\'ordoba, Argentina and CIEM, National Scientific and Technical Research Council (CONICET), Argentina
-5. Department of Mathematics, Bangalore University, India}\\
-6. Department of Mathematics \& School of Biomedical Engineering, Colorado State University, Fort Collins, CO 80521, USA
+3. Engineering, Modeling and Applied Social Sciences Center, Federal University of ABC, São Paulo, Brazil
+4. FaMAF, National University of Córdoba, Córdoba, Argentina and CIEM, National Scientific and Technical Research Council (CONICET), Argentina
+5. Department of Mathematics, Bangalore University, India
+6. Department of Mathematics & School of Biomedical Engineering, Colorado State University, Fort Collins, CO 80521, USA
 
 *Corresponding author. Email:  alsaker@gonzaga.edu.
 
