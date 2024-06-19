@@ -1,6 +1,6 @@
-# VHPT
+# Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows
 
-This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*^1, Siiri Rautio,$^2$ Fernando Moura,$^3$   Juan Pablo Agnelli,$^4$  Rashmi Murthy,$^5$ Matti Lassas,$^2$  Jennifer L. Mueller,$^6$ Samuli Siltanen$^2$  
+This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*<sup> 1</sup>, Siiri Rautio,^2 Fernando Moura,^3   Juan Pablo Agnelli,$^4$  Rashmi Murthy,$^5$ Matti Lassas,$^2$  Jennifer L. Mueller,$^6$ Samuli Siltanen$^2$  
 
 1. Department of Mathematics, Gonzaga University, Spokane, WA 99258, USA
 2. Department of Mathematics and Statistics, University of Helsinki, Helsinki, Finland
