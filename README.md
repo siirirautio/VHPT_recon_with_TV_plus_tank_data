@@ -1,6 +1,8 @@
 # Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows
 
-This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*<sup> 1</sup>, Siiri Rautio,^2 Fernando Moura,^3   Juan Pablo Agnelli,$^4$  Rashmi Murthy,$^5$ Matti Lassas,$^2$  Jennifer L. Mueller,$^6$ Samuli Siltanen$^2$  
+### General information
+
+This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*<sup>1</sup>, Siiri Rautio<sup>2</sup>, Fernando Moura<sup>3</sup>,  Juan Pablo Agnelli<sup>4</sup>, Rashmi Murthy<sup>5</sup>, Matti Lassas<sup>2</sup>, Jennifer L. Mueller<sup>6</sup>, Samuli Siltanen<sup>2</sup>.
 
 1. Department of Mathematics, Gonzaga University, Spokane, WA 99258, USA
 2. Department of Mathematics and Statistics, University of Helsinki, Helsinki, Finland
