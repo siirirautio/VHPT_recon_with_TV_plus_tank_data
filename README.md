@@ -13,6 +13,10 @@ This code was used to produce the results in "Computed tomography without X-rays
 
 *Corresponding author. Email:  alsaker@gonzaga.edu.
 
+### Data
+
 All the data for the 3 phantoms used in the paper are included. 
 
-You can run the file 'runThis_sinogramFromElectrodeData' and it should work. The first time you run the code it will generate an output directory if the option to save is selected. 
+### How to run the code
+
+Run the file `runThis_sinogramFromElectrodeData.m`. The first time you run the code it will generate an output directory if the option to save is selected. This file outputs the blurry sinogram, that is the input for the neural network.
