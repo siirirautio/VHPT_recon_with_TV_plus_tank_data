@@ -15,7 +15,10 @@ This code was used to produce the results in "Computed tomography without X-rays
 
 ### Data
 
-All the data for the 3 phantoms used in the paper are included. 
+All the data for the 3 phantoms used in the paper are included:
+- pac_man_2_22_11_07_11_11_05.mat
+- split_yellow_22_11_07_10_33_25.mat
+- two_large_yellow_22_11_07_10_21_29.mat
 
 ### How to run the code
 
