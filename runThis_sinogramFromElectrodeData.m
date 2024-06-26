@@ -43,7 +43,7 @@ save_plots              = true;  % Save a plot of the CGO sinogram and FBP recon
 
 % Specifiy directory where output will be saved. Include forward or backslash as appropriate.
 % If it doesn't exist already, we'll create it
-outdir  = 'output/';
+outdir  = 'outputs/CGO_sinograms/';
 
 % Specify directory where all EIT data is stored
 datadir = 'voltage_data/';
