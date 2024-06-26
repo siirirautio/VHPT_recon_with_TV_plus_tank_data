@@ -23,3 +23,7 @@ All the data for the 3 phantoms used in the paper are included:
 ### How to run the code
 
 Run the file `runThis_sinogramFromElectrodeData.m`. The first time you run the code it will generate an output directory if the option to save is selected. This file outputs the blurry sinogram, that is the input for the neural network.
+
+Run the file `deblur_sinogram.py` to deblur the sinogram.
+
+Finally, run the file `VHPT_TV_comp.m` to reconstruct the deblurred sinogram using Total Variation regularixation and compute the reconstucted conductivity.
