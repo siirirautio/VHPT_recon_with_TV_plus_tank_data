@@ -26,4 +26,4 @@ Run the file `runThis_sinogramFromElectrodeData.m`. The first time you run the c
 
 Run the file `deblur_sinogram.py` to deblur the sinogram.
 
-Finally, run the file `VHPT_TV_comp.m` to reconstruct the deblurred sinogram using Total Variation regularixation and compute the reconstucted conductivity.
+Finally, run the file `VHPT_TV_comp.m` to reconstruct the deblurred sinogram using Total Variation regularization and compute the reconstucted conductivity.
