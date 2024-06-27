@@ -20,7 +20,7 @@
 % OUTPUTS:
 % tildeT_odd = a complex contour integral over the boundary of the difference (omega^+) - (omega^-)
 
-% Authors: Melody Alsaker, Siiri Rautio
+% Copyright (c) 2024 Melody Alsaker, Siiri Rautio
 % Date last modified: June 2024
 %===================================================================================================
 %===================================================================================================

@@ -1,13 +1,13 @@
 %===================================================================================================
 %===================================================================================================
-% This scipt computes the Total Variation reconstruction of the deblurred
+% This script computes the Total Variation reconstruction of the deblurred
 % CGO sinogram.
 
-% The scipt calls to tomo_tv.m, a modified version of the primal-dual 
+% The script calls to tomo_tv.m, a modified version of the primal-dual 
 % algorithm with total generalized variation (TGV) tomography.
 % copyright (c) 2012 Kristian Bredies
 
-% Authors: Samuli Siltanen, Siiri Rautio
+% Copyright (c) 2024 Samuli Siltanen, Siiri Rautio
 % Date last modified: June 2024
 %===================================================================================================
 %===================================================================================================
@@ -19,8 +19,11 @@ close all;
 %========================================== Preliminaries ==========================================
 %===================================================================================================
 
+% Add directory with stored subroutines and inputs
+addpath Step3_subroutines/
+
 % Load the measurement matrix and parameters from file
-load data/RadonMatrix A measang N P Nang
+load RadonMatrix A measang N P Nang
 
 % Load the deblurred sinogram from file and pad it
 filename = 'deblurred_sinogram_0000';

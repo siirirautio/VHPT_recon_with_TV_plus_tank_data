@@ -13,17 +13,25 @@ This code was used to produce the results in "Computed tomography without X-rays
 
 *Corresponding author. Email:  alsaker@gonzaga.edu.
 
+### Code authors
+
+Main algorithms: copyright (c) 2004 Melody Alsaker, Siiri Rautio, Samuli Siltanen
+
+Some subroutines use code authored by other individuals. Whenever possible, appropriate credit has been given within the relevant files. 
+
 ### Data
 
-All the data for the 3 phantoms used in the paper are included:
-- pac_man_2_22_11_07_11_11_05.mat
-- split_yellow_22_11_07_10_33_25.mat
-- two_large_yellow_22_11_07_10_21_29.mat
+The EIT data for the 3 targets used in the paper, along with the calibration set (collected on a tank filled with homogeneous saline) and the set corresponding to numerically simulated data on a homogeneous domain are included in the directory labeled DATA:
+- Data_S1: Target I 
+- Data_S2: Target II 
+- Data_S3: Target III 
+- Data_S4_clb: Calibration data (homogeneous tank)
+- Data_S5_cem: CEM simulated data (homogeneous domain)
 
 ### How to run the code
 
-Run the file `runThis_sinogramFromElectrodeData.m`. The first time you run the code it will generate an output directory if the option to save is selected. This file outputs the blurry sinogram, that is the input for the neural network.
+1. Run the MATLAB file `Step1_runthis.m`. The first time you run the code it will generate an output directory if the option to save is selected. This file reads in EIT data and outputs a .mat file containing the blurry sinogram, which is the input for the neural network in Step 2.
 
-Run the file `deblur_sinogram.py` to deblur the sinogram.
+2. Run the Python file `Step2_runthis.py` to deblur the sinogram which was output in Step 1. The deblurred sinogram is saved as a .mat file in the output directory. 
 
-Finally, run the file `VHPT_TV_comp.m` to reconstruct the deblurred sinogram using Total Variation regularization and compute the reconstucted conductivity.
+3. Finally, run the file `Step3_runthis.m` to reconstruct a conductivity image from the deblurred sinogram using Total Variation regularization. The final reconstruction is saved 

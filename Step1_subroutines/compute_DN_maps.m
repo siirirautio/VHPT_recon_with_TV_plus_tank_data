@@ -14,7 +14,7 @@
 % DN1           = the DN map for the continuum model, corresponding to sigma = 1
 % Ntrig         = the number of sines / cosines in the trigonometric current pattern basis
 
-% Author: Melody Alsaker
+% Copyright (c) 2024 Melody Alsaker
 % Date last modified: June 2024
 %===================================================================================================
 %===================================================================================================

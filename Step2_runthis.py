@@ -1,11 +1,11 @@
 #========================================================================================================
 #========================================================================================================
 # This script loads the blurry CGO sinograms and neural network model parameters and then deblurs the 
-# sinograms while simultaneusly stripping away the higher order terms from the scattering series. 
-# The blurry sinograms are computed using the 'runThis_sinogramFromElectrodeData.m'routine. 
+# sinograms while simultaneously stripping away the higher order terms from the scattering series. 
+# The blurry sinograms are computed using the 'Step1_runthis' routine. 
 # The output is saved as a .mat file.
 
-# Author: Siiri Rautio
+# Copyright (c) 2004 Siiri Rautio
 # Last modified: April 2024
 #========================================================================================================
 #========================================================================================================

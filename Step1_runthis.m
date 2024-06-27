@@ -1,6 +1,6 @@
 %===================================================================================================
 %===================================================================================================
-% This script loads EIT data, computes a DN map, and calls subroutines necessary to generate a
+% This script loads EIT data and calls subroutines necessary to compute a DN map and generate a
 % blurred CGO sinogram from real-world EIT electrode data, as part of the VHPT imaging chain.
 % Output from this routine serves as an input into a neural network which strips the higher-order
 % terms of the scattering series and peforms deconvolution to achieve a sharpened sinogram.
@@ -16,18 +16,21 @@
 % -Current is applied on L electrodes according to a trigonometric current pattern basis as used
 %  by the ACT5 EIT machine (Shishvan, Abdelwahab, et al, 2023).
 
-% To calibrate the DN map, we use the approach based on the work of Garde-Hyvönen, 2021, using
+% To calibrate the DN map, we use the approach based on the work of Garde & Hyvönen, 2021, using
 % voltages collected on a homogeneous saline tank as well as data simulated on a homogeneous domain,
 % computed using the Complete Electrode Model (CEM) solved via FEM. These three datasets must be
 % specified and loaded.
 
-% Authors: Melody Alsaker, Siiri Rautio
+% Copyright (c) 2024 Melody Alsaker, Siiri Rautio
 % Date last modified: June 2024
 %===================================================================================================
 %===================================================================================================
 
 clear 
 totalRuntimeStart = tic;    % Start code timer
+
+addpath Step1_subroutines/  % Add path containing .m files for all subroutines
+
 
 %===================================================================================================
 %====================================== User-Specified Options =====================================
@@ -46,12 +49,12 @@ save_plots              = true;  % Save a plot of the CGO sinogram and FBP recon
 outdir  = 'output/CGO_sinograms/';
 
 % Specify directory where all EIT data is stored
-datadir = 'voltage_data/';
+datadir = 'DATA/';
 
 % Specify names of .mat files containing EIT data
-V_clb_fname = 'saline_270_22_11_07_10_16_18';        % Calibration data (e.g. homogeneous tank)
-V_trg_fname = 'two_large_yellow_22_11_07_10_21_29';  % Target data (what we wish to image)
-V_1cem_fname = 'CEM_voltages_homog_CPamp0p35';       % Simulated homogeneous data from CEM
+V_clb_fname     = 'Data_S4_clb';    % Calibration data (e.g. homogeneous tank)
+V_trg_fname     = 'Data_S1';        % Target data (what we wish to image)
+V_1cem_fname    = 'Data_S5_cem';    % Simulated homogeneous data from CEM
 
 
 % Specify computational parameters
@@ -65,13 +68,13 @@ Nth         = 128;      % Number of spatial domain boundary points used in solvi
 
 
 %===================================================================================================
-%========================================== Construct DN Maps ======================================
+%======================================= Construct DN Maps =========================================
 %===================================================================================================
 [DN, DN1, Ntrig] = compute_DN_maps(datadir, V_clb_fname, V_trg_fname, V_1cem_fname);
 
 
 %===================================================================================================
-%================================ Compute CGO Traces over Disc Boundary ============================
+%============================= Compute CGO Traces over Disc Boundary ===============================
 %===================================================================================================
 
 % Construct mu-Hilbert matrices used in construction of projection operators
