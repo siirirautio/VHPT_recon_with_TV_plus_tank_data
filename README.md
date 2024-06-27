@@ -2,6 +2,8 @@
 
 ### General information
 
+DOI: 10.5281/zenodo.12571548
+
 This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*<sup>1</sup>, Siiri Rautio<sup>2</sup>, Fernando Moura<sup>3</sup>,  Juan Pablo Agnelli<sup>4</sup>, Rashmi Murthy<sup>5</sup>, Matti Lassas<sup>2</sup>, Jennifer L. Mueller<sup>6</sup>, Samuli Siltanen<sup>2</sup>.
 
 1. Department of Mathematics, Gonzaga University, Spokane, WA 99258, USA
@@ -15,7 +17,7 @@ This code was used to produce the results in "Computed tomography without X-rays
 
 ### Code authors
 
-Main algorithms: copyright (c) 2004 Melody Alsaker, Siiri Rautio, Samuli Siltanen
+Main algorithms: copyright (c) 2024 Melody Alsaker, Siiri Rautio, Samuli Siltanen
 
 Some subroutines use code authored by other individuals. Whenever possible, appropriate credit has been given within the relevant files. 
 
@@ -32,6 +34,6 @@ The EIT data for the 3 targets used in the paper, along with the calibration set
 
 1. Run the MATLAB file `Step1_runthis.m`. The first time you run the code it will generate an output directory if the option to save is selected. This file reads in EIT data and outputs a .mat file containing the blurry sinogram, which is the input for the neural network in Step 2.
 
-2. Run the Python file `Step2_runthis.py` to deblur the sinogram which was output in Step 1. The deblurred sinogram is saved as a .mat file in the output directory. 
+2. Run the Python file `Step2_runthis.py` to deblur the sinogram which was output in Step 1. The deblurred sinogram is saved as a .mat file in the output directory. The proper use of these files requires the following dependencies: Python '3.10', tensorflow '2.11.0', scipy '1.10.0', cv2 '4.7.0.68', numpy '1.24.2'.
 
 3. Finally, run the file `Step3_runthis.m` to reconstruct a conductivity image from the deblurred sinogram using Total Variation regularization. The final reconstruction is saved 
