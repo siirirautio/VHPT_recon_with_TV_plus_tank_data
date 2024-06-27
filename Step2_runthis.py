@@ -62,7 +62,7 @@ test_input = test_input.astype('float64')
 #========================================================================================================
 
 # Load model 
-autoencoder = models.load_model('Step3_models/model_140224')
+autoencoder = models.load_model('Step2_models/model_140224')
 
 # Neural network prediction
 test_prediction = autoencoder.predict(test_input)
