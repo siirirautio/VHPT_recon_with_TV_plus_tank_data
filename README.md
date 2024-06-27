@@ -43,4 +43,4 @@ The EIT data for the 3 targets used in the paper, along with the calibration set
 
 2. Run the Python file `Step2_runthis.py` to deblur the sinogram which was output in Step 1. The deblurred sinogram is saved as a .mat file in the output directory. The proper use of these files requires the following dependencies: Python '3.10', tensorflow '2.11.0', scipy '1.10.0', cv2 '4.7.0.68', numpy '1.24.2'.
 
-3. Finally, run the file `Step3_runthis.m` to reconstruct a conductivity image from the deblurred sinogram using Total Variation regularization. The final reconstruction is saved 
+3. Finally, run the file `Step3_runthis.m` to reconstruct a conductivity image from the deblurred sinogram using Total Variation regularization. The final reconstruction is saved to `output/reconsructions`.

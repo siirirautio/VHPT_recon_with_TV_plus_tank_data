@@ -26,7 +26,7 @@ addpath Step3_subroutines/
 load RadonMatrix A measang N P Nang
 
 % Load the deblurred sinogram from file and pad it
-filename = 'S3_deblurred_sinogram'; %
+filename = 'S1_deblurred_sinogram'; %
 sinogram = double(load(['output/deblurred_sinograms/',filename,'.mat']).deblurred_sinogram);
 mn       = [sinogram;zeros(1,100)]; % Add an extra row of zeros
 
@@ -45,17 +45,17 @@ m = mn/normA;
 m = m/norm(m);
 
 %===================================================================================================
-%================= Filtered backprojection reconstruction (for comparison) =========================
+%=======rot90========== Filtered backprojection reconstruction (for comparison) =========================
 %===================================================================================================
 
 % Compute FBP reconstruction
 reco_fbp = iradon(m, measang);
-reco_fbp = rot90(reco_fbp);
+%reco_fbp = rot90(reco_fbp);
 
 % Plot
 figure(3)
 clf
-imagesc(reco_fbp)
+imagesc(flipud(reco_fbp))
 title('FBP reconstruction')
 colormap gray
 axis off
@@ -73,7 +73,7 @@ for alpha = [0.006, 0.009, 0.02]
 
     % Reconstruct using total generalized variation
     recn = tomo_tv(m, A, 2, alpha, max_iter, 1);
-    recn = rot90(recn);
+    recn = flipud(recn);
 
     % From mu to conductivity
     recn_cond = (1-recn)./(1+recn);
@@ -89,11 +89,11 @@ for alpha = [0.006, 0.009, 0.02]
     
     % Save as .png file
     reco_plot = uint8(rescale(recn_cond,1,256)); % Rescale for png image
-    path = ['output/reconstructions/rec_tv_', filename, 'alpha', num2str(alpha)];
-    imwrite(reco_plot,path,'png');
+    path = ['output/reconstructions/', filename, '_reconstruction_tv_alpha', num2str(alpha),'.png'];
+    imwrite(reco_plot,path);
     
     % Save as .mat file
-    path2 = ['output/reconstructions/rec_tv_', filename, 'alpha', num2str(alpha),'.mat'];
+    path2 = ['output/reconstructions/', filename, '_reconstruction_tv_alpha', num2str(alpha),'.mat'];
     save(path2, 'recn_cond');
 end
 
