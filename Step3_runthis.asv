@@ -26,9 +26,9 @@ addpath Step3_subroutines/
 load RadonMatrix A measang N P Nang
 
 % Load the deblurred sinogram from file and pad it
-filename = 'S3_deblurred_sinogram'; %
+filename = 'S1_deblurred_sinogram'; 
 sinogram = double(load(['output/deblurred_sinograms/',filename,'.mat']).deblurred_sinogram);
-mn       = [sinogram;zeros(1,100)]; % Add an extra row of zeros
+mn = [sinogram;zeros(1,100)];
 
 % Plot
 figure(2)
@@ -38,7 +38,8 @@ title('Sinogram')
 colormap gray
 axis off
 
-% Normalize measurement matrix so that its norm is one. Normalize the measurement similarly
+% Normalize measurement matrix so that its norm is one. Normalize 
+% measurement similarly
 normA = normest(A);
 A = A/normA; 
 m = mn/normA; 
@@ -69,7 +70,7 @@ axis equal
 max_iter = 5000;
 
 % Loop over a range of regularization parameters
-for alpha = [0.006, 0.009, 0.02]
+for alpha = [0.002, 0.004, 0.006, 0.008]
 
     % Reconstruct using total generalized variation
     recn = tomo_tv(m, A, 2, alpha, max_iter, 1);
@@ -93,8 +94,7 @@ for alpha = [0.006, 0.009, 0.02]
     imwrite(reco_plot,path,'png');
     
     % Save as .mat file
-    path2 = ['output/reconstructions/rec_tv_', filename, 'alpha', num2str(alpha),'.mat'];
-    save(path2, 'recn_cond');
+    save(path, 'recn_cond');
 end
 
 

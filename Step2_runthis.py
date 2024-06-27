@@ -5,7 +5,7 @@
 # The blurry sinograms are computed using the 'Step1_runthis' routine. 
 # The output is saved as a .mat file.
 
-# Copyright (c) 2004 Siiri Rautio
+# Copyright (c) 2024 Siiri Rautio
 # Last modified: April 2024
 #========================================================================================================
 #========================================================================================================
@@ -37,7 +37,7 @@ test_input = []
 #========================================================================================================
 
 # Path to files
-files      = sorted(glob.glob ("output/*.mat"))
+files      = sorted(glob.glob ("output/CGO_sinograms/*.mat"))
 
 for myFile in files:
     print(myFile)
@@ -62,7 +62,7 @@ test_input = test_input.astype('float64')
 #========================================================================================================
 
 # Load model 
-autoencoder = models.load_model('models/model_140224')
+autoencoder = models.load_model('Step3_models/model_140224')
 
 # Neural network prediction
 test_prediction = autoencoder.predict(test_input)
@@ -70,7 +70,8 @@ test_prediction = autoencoder.predict(test_input)
 # Save results as mat.-files
 for iii in range(len(test_prediction)):
     myData   = test_prediction[iii,:,:,:]
-    filename = "output/deblurred_sinograms/deblurred_sinogram_%04.f.mat" % iii
+    index    = iii + 1
+    filename = "output/deblurred_sinograms/S%i_deblurred_sinogram.mat" % index
     savemat(filename, {'deblurred_sinogram': myData})
-    print(iii)
+    print(index)
 
