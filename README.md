@@ -1,8 +1,20 @@
-# Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows
+# VHPT with TV Reconstruction: a Software Package for Regularized Virtual Hybrid Parallel-Beam Tomography
 
-### General information
+### Creators
+
+Copyright (c) 2024 Melody Alsaker, Siiri Rautio, Samuli Siltanen
+Some subroutines use code authored by other individuals. Whenever possible, appropriate credit has been given within the relevant files. 
+
+### Citation information
 
 DOI: 10.5281/zenodo.12571548
+Zenodo Repository: VHPT_recon_with_TV_plus_tank_data
+
+Example citation: 
+M. Alsaker, S. Rautio, S. Siltanen. VHPT with TV Reconstruction: a Software Package for Regularized Virtual Hybrid Parallel-Beam Tomography, VHPT_recon_with_TV_plus_tank_data (2024); https://doi.org/10.5281/zenodo.12571548
+
+
+### General information
 
 This code was used to produce the results in "Computed tomography without X-rays: parallel-beam imaging from nonlinear current flows" by Melody Alsaker*<sup>1</sup>, Siiri Rautio<sup>2</sup>, Fernando Moura<sup>3</sup>,  Juan Pablo Agnelli<sup>4</sup>, Rashmi Murthy<sup>5</sup>, Matti Lassas<sup>2</sup>, Jennifer L. Mueller<sup>6</sup>, Samuli Siltanen<sup>2</sup>.
 
@@ -13,13 +25,8 @@ This code was used to produce the results in "Computed tomography without X-rays
 5. Department of Mathematics, Bangalore University, India
 6. Department of Mathematics & School of Biomedical Engineering, Colorado State University, Fort Collins, CO 80521, USA
 
-*Corresponding author. Email:  alsaker@gonzaga.edu.
+*Corresponding author. Email:  alsaker@gonzaga.edu
 
-### Code authors
-
-Main algorithms: copyright (c) 2024 Melody Alsaker, Siiri Rautio, Samuli Siltanen
-
-Some subroutines use code authored by other individuals. Whenever possible, appropriate credit has been given within the relevant files. 
 
 ### Data
 
