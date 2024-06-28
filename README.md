@@ -3,6 +3,7 @@
 ### Creators
 
 Copyright (c) 2024 Melody Alsaker, Siiri Rautio, Samuli Siltanen
+
 Some subroutines use code authored by other individuals. Whenever possible, appropriate credit has been given within the relevant files. 
 
 ### Citation information
