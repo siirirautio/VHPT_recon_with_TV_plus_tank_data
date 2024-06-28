@@ -20,6 +20,7 @@ import scipy.io
 from tensorflow.keras import models
 import numpy as np
 from scipy.io import savemat
+import os
 
 #========================================================================================================
 #========================================== Preliminaries ===============================================
@@ -66,6 +67,13 @@ autoencoder = models.load_model('Step2_models/model_140224')
 
 # Neural network prediction
 test_prediction = autoencoder.predict(test_input)
+
+# Check whether the output directory exists or not
+path    = 'output/deblurred_sinograms'
+isExist = os.path.exists(path)
+if not isExist:
+    # Create a new directory because it does not exist
+       os.makedirs(path)
 
 # Save results as mat.-files
 for iii in range(len(test_prediction)):

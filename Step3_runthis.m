@@ -22,6 +22,12 @@ close all;
 % Add directory with stored subroutines and inputs
 addpath Step3_subroutines/
 
+% Create output directory
+outdir  = 'output/reconstructions/';
+if ~exist(outdir, 'dir')
+        mkdir(outdir)
+end
+
 % Load the measurement matrix and parameters from file
 load RadonMatrix A measang N P Nang
 
