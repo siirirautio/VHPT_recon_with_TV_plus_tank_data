@@ -8,12 +8,10 @@ Some subroutines use code authored by other individuals. Whenever possible, appr
 
 ### Citation information
 
-DOI: 10.5281/zenodo.12571548
-
-Zenodo Repository Name: VHPT_recon_with_TV_plus_tank_data
+DOI: 10.5281/zenodo.12581353
 
 Example citation: 
-M. Alsaker, S. Rautio, S. Siltanen. VHPT with TV Reconstruction: a Software Package for Regularized Virtual Hybrid Parallel-Beam Tomography, Zenodo (2024); https://doi.org/10.5281/zenodo.12571548
+Alsaker, M., Rautio, S., & Siltanen, S. (2024). VHPT with TV reconstruction: a software package for regularized virtual hybrid parallel-beam tomography (v1.0). Zenodo. https://doi.org/10.5281/zenodo.12581354
 
 
 ### General information
